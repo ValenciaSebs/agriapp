@@ -1,4 +1,5 @@
 import 'package:agrip_app/pantallas/appbar.dart';
+import 'package:agrip_app/pantallas/headline.dart';
 import 'package:flutter/material.dart';
 
 class Inicio extends StatelessWidget {
@@ -12,7 +13,7 @@ class Inicio extends StatelessWidget {
             body: Container(
                 child: Column(
                     children: [
-                         
+                      Headline()   
                         
                     ]
                 ),
