@@ -9,7 +9,7 @@ class Headline extends StatelessWidget {
     child: Column
     (children: [
       Text("Mercados campesinos a tu alcance"), 
-      Text("Explora nuestro catálogo y empieza a llenar tu alacena de compras con los productos más deliciosos y saludables."),
+      Text("Explora nuestro catálogo y empieza a llenar tu alacena con los productos más deliciosos y saludables."),
       AssetImage("assets/imagenes/foto1.png")
     ],),
     );
