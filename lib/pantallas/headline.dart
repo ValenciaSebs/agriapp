@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 
 class Headline extends StatelessWidget {
-  const Headline({super.key, required this.image});
-
-  final String image;
+  const Headline({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset(
-        image,
-        
-      width: 1080,
-      height: 673,
-      fit: BoxFit.cover,
+    return Container(
+    child: Column
+    (children: [
+      Text("Mercados campesinos a tu alcance"), 
+      Text("Explora nuestro catálogo y empieza a llenar tu alacena con los productos más deliciosos y saludables."),
+      AssetImage("assets/imagenes/foto1.png")
+    ],),
     );
   }
 }
