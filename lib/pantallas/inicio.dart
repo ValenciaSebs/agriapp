@@ -1,4 +1,4 @@
-import 'package:agrip_app/pantallas/headline.dart';
+import 'package:agrip_app/pantallas/appbar.dart';
 import 'package:flutter/material.dart';
 
 class Inicio extends StatelessWidget {
@@ -6,13 +6,14 @@ class Inicio extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return MaterialApp(
         home: Scaffold(
+          appBar: Barra(CenterTitle: CenterTitle, title: title, backgroundColor: backgroundColor),
             body: Container(
                 child: Column(
                     children: [
-                        AppBar(), 
-                        Headline("assets/imagenes/"),
+                         
+                        
                     ]
                 ),
             ),
