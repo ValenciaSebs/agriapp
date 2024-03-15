@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Headline extends StatelessWidget {
-  const Headline({super.key});
+  Headline({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +11,7 @@ class Headline extends StatelessWidget {
     (children: [
       Text("Mercados campesinos a tu alcance"), 
       Text("Explora nuestro catálogo y empieza a llenar tu alacena con los productos más deliciosos y saludables."),
-      AssetImage("assets/imagenes/foto1.png")
+      Image.asset("assets/imagenes/foto1.png")
     ],),
     );
   }
