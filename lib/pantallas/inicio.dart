@@ -8,7 +8,7 @@ class Inicio extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-          appBar: Barra(CenterTitle: CenterTitle, title: title, backgroundColor: backgroundColor),
+          appBar: AppBar()
             body: Container(
                 child: Column(
                     children: [
@@ -22,5 +22,3 @@ class Inicio extends StatelessWidget {
   }
 }
 
-
-hola
