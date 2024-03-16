@@ -1,5 +1,6 @@
 import 'package:agrip_app/pantallas/Buscadorhome.dart';
 import 'package:agrip_app/pantallas/appbar.dart';
+import 'package:agrip_app/pantallas/footer.dart';
 import 'package:agrip_app/pantallas/headline.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +17,7 @@ class Inicio extends StatelessWidget {
                     children: [
                       Headline(),
                       BuscadorHome(),
+                      Footer(),
                     ]
                 ),
             ),
