@@ -46,8 +46,7 @@ class Headline extends StatelessWidget {
       child: 
       Image.asset("assets/imagenes/foto1.png"),
       ),
-  
-      
+
     ],),
     );
   }
