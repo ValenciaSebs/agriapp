@@ -9,28 +9,33 @@ class Inicio extends StatelessWidget {
     return MaterialApp(
         home: Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Color(0xFF354C45),
         leading: IconButton(
-          icon: Image.asset('assets/imagenes/logo.png'),
+          icon: Image.asset(
+            'assets/imagenes/logo.png',
+            width: 1000,
+            height: 200,
+          ),
           onPressed: () {
             // Lógica para la acción al presionar la imagen (si es necesario)
           },
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.search),
+            icon: Icon(Icons.search, size: 40, color: Color(0xFF5AA189)),
             onPressed: () {
               // Lógica para la búsqueda
             },
           ),
           IconButton(
-            icon: Icon(Icons.account_circle),
+            icon:
+                Icon(Icons.account_circle, size: 40, color: Color(0xFF5AA189)),
             onPressed: () {
               // Lógica para el perfil de usuario
             },
           ),
           IconButton(
-            icon: Icon(Icons.menu),
+            icon: Icon(Icons.menu, size: 40, color: Color(0xFF5AA189)),
             onPressed: () {
               // Lógica para desplegar el menú
             },
