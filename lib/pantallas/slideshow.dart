@@ -27,14 +27,14 @@ class Slideshow extends StatelessWidget {
       ),
       ),
 
-      Container(padding:EdgeInsets.only(top: 0, bottom: 22, left: 0, right: 0),
+      Container(padding:EdgeInsets.only(top: 12, bottom: 22, left: 10, right: 10),
         child: 
         ImageSlideshow(
 
           /// Width of the [ImageSlideshow].
           width: double.infinity,
           /// Height of the [ImageSlideshow].
-          height: 620,
+          height: 595,
           /// The page to show when first creating the [ImageSlideshow].
           initialPage: 0,
           /// The color to paint the indicator.

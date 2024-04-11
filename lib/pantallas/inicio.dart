@@ -1,3 +1,4 @@
+import 'package:agrip_app/pantallas/Buscadorbar.dart';
 import 'package:agrip_app/pantallas/Buscadorhome.dart';
 import 'package:agrip_app/pantallas/appbar.dart';
 import 'package:agrip_app/pantallas/footer.dart';
@@ -12,6 +13,7 @@ class Inicio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
         home: Scaffold(
           //appBar: Barra(CenterTitle: CenterTitle, title: title, backgroundColor: backgroundColor),
             body: Container(
@@ -19,7 +21,8 @@ class Inicio extends StatelessWidget {
                     children: [
                       //Headline(),
                       //BuscadorHome(),
-                      Slideshow(),
+                      Buscadorbar(),
+                      //Slideshow(),
                       Footer(),
                     ]
                 ),
@@ -27,4 +30,7 @@ class Inicio extends StatelessWidget {
         )
     );
   }
+}
+
+class Buscador {
 }

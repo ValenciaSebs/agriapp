@@ -89,6 +89,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.17"
+  expandable_search_bar:
+    dependency: "direct main"
+    description:
+      name: expandable_search_bar
+      sha256: "8f1bde484317a00805b6ada0dde4e3656f5a8dd28959e8cd0835149da3682c02"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.2"
   fake_async:
     dependency: transitive
     description:
@@ -333,6 +341,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.8.0"
+  material_floating_search_bar_2:
+    dependency: "direct main"
+    description:
+      name: material_floating_search_bar_2
+      sha256: ab0c6d209d9491f98dd4c72f2641d0ba1dd35c87effca1f23d8679bece43add0
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.5.0"
   meta:
     dependency: transitive
     description:
@@ -341,6 +357,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.11.0"
+  outline_search_bar:
+    dependency: "direct main"
+    description:
+      name: outline_search_bar
+      sha256: "340fc91de887e3d9cd852756394220c9145bd298df9cb348d864cb19778a4b5a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.3.0"
   path:
     dependency: transitive
     description:
@@ -429,6 +453,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
+  searchfield:
+    dependency: "direct main"
+    description:
+      name: searchfield
+      sha256: "7716650654b387ce77aa2062a296a7caf2d094c0fef7376935e4d3c28cd012c8"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
+  simple_text_field:
+    dependency: transitive
+    description:
+      name: simple_text_field
+      sha256: "925bfdaa860258b263bc1497d02583da3464731dce83d80f6f4e2af0b5ffce12"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.0"
   sky_engine:
     dependency: transitive
     description: flutter
