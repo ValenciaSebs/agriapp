@@ -1,5 +1,4 @@
 import 'package:agrip_app/pantallas/actuausuario.dart';
-import 'package:agrip_app/pantallas/actuperfil.dart';
 import 'package:agrip_app/pantallas/headline.dart';
 import 'package:agrip_app/pantallas/ingreso.dart';
 import 'package:agrip_app/pantallas/inicio.dart';

@@ -1,5 +1,7 @@
 import 'package:agrip_app/pantallas/Buscadorbar.dart';
 import 'package:agrip_app/pantallas/noticias.dart';
+import 'package:agrip_app/pantallas/panperfilsin.dart';
+import 'package:agrip_app/pantallas/regisingres.dart';
 import 'package:agrip_app/pantallas/usuario2.dart';
 import 'package:flutter/material.dart';
 
@@ -90,6 +92,18 @@ class InicioSin extends StatelessWidget {
                     ),
                   ),
                 ),
+                PopupMenuItem(
+                  value: 'salir',
+                  child: Container(
+                    width: 120, // Ajusta el ancho del contenedor
+                    child: Text(
+                      'SALIR',
+                      style: TextStyle(
+                        color: Color(0xFFfdf2e3),
+                      ), // Cambiar color del texto
+                    ),
+                  ),
+                ),
               ],
               onSelected: (String value) {
                 // Lógica para manejar la opción seleccionada
@@ -115,8 +129,11 @@ class InicioSin extends StatelessWidget {
                     Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Usuario2()),
+                              builder: (context) => const PanPerfilSin()),
                         );
+                    break;
+                     case 'salir':
+                   Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)=>Regisingres()));
                     break;
                 }
               },

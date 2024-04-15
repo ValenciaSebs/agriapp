@@ -1,4 +1,5 @@
 import 'package:agrip_app/pantallas/noticias.dart';
+import 'package:agrip_app/pantallas/regisingres.dart';
 import 'package:flutter/material.dart';
 
 import 'package:agrip_app/pantallas/iniciosin.dart';
@@ -11,7 +12,7 @@ import 'package:agrip_app/pantallas/footer.dart';
 class PanPerfilSin extends StatelessWidget {
   const PanPerfilSin ({super.key});
 
-  @override
+   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
@@ -22,11 +23,15 @@ class PanPerfilSin extends StatelessWidget {
             child: IconButton(
               icon: Image.asset('assets/imagenes/logo.png'),
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)=>InicioSin()));
+                Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const InicioSin()),
+                        );
               },
             ),
           ),
-          actions: [
+          actions: [ // Cambiado de corchetes por paréntesis
             PopupMenuButton(
               elevation: 5, // Quita la sombra
               color: Color(0xFF354C45), // Color de fondo del menú
@@ -86,21 +91,48 @@ class PanPerfilSin extends StatelessWidget {
                     ),
                   ),
                 ),
+                PopupMenuItem(
+                  value: 'salir',
+                  child: Container(
+                    width: 120, // Ajusta el ancho del contenedor
+                    child: Text(
+                      'SALIR',
+                      style: TextStyle(
+                        color: Color(0xFFfdf2e3),
+                      ), // Cambiar color del texto
+                    ),
+                  ),
+                ),
               ],
               onSelected: (String value) {
                 // Lógica para manejar la opción seleccionada
                 switch (value) {
                   case 'inicio':
-                    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)=>InicioSin()));
+                     Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const InicioSin()),
+                        );
                     break;
                   case 'noticias':
-                   Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)=>Noticias()));
+                     Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Noticias()),
+                        );
                     break;
                   case 'productos':
                     // Lógica para la opción Productos
                     break;
                   case 'tienda':
-                    // Lógica para la opción Tienda
+                    Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const PanPerfilSin()),
+                        );
+                    break;
+                     case 'salir':
+                   Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)=>Regisingres()));
                     break;
                 }
               },

@@ -217,6 +217,36 @@ class Actuausuario extends StatelessWidget {
                 },
               ),
             ),
+            SizedBox(height: 20), // Espacio entre los widgets
+            Container(
+              width: 350,
+              height: 50,
+              decoration: BoxDecoration(
+                color: Colors.white, // Cambia el color de fondo
+                borderRadius: BorderRadius.circular(18),
+                border: Border.all(color: Color(0xFF0d5846)), // Borde verde
+              ),
+              alignment: Alignment.center,
+              child: TextFormField(
+                style: TextStyle(
+                  color: Colors.black87,
+                ), // Cambia el color del texto
+                decoration: InputDecoration(
+                  hintText: 'Cambiar contraseña...',
+                  hintStyle: TextStyle(
+                    color: Colors.grey[500],
+                  ), // Cambia el color del hint
+                  border: InputBorder.none,
+                  contentPadding: EdgeInsets.symmetric(horizontal: 20),
+                ),
+                keyboardType: TextInputType.emailAddress,
+                cursorColor: Colors.grey[500], // Cambia el color del cursor
+                autofocus: false,
+                onChanged: (value) {
+                  // Lógica cuando se cambia el texto
+                },
+              ),
+            ),
           ],
         ),
       ),

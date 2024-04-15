@@ -1,4 +1,5 @@
 import 'package:agrip_app/pantallas/noticias.dart';
+import 'package:agrip_app/pantallas/regisingres.dart';
 import 'package:flutter/material.dart';
 
 import 'package:agrip_app/pantallas/inicio.dart';
@@ -92,6 +93,18 @@ class PanPerfil extends StatelessWidget {
                     ),
                   ),
                 ),
+                PopupMenuItem(
+                  value: 'cerrarses',
+                  child: Container(
+                    width: 120, // Ajusta el ancho del contenedor
+                    child: Text(
+                      'CERRAR SESION',
+                      style: TextStyle(
+                        color: Color(0xFFfdf2e3),
+                      ), // Cambiar color del texto
+                    ),
+                  ),
+                ),
               ],
               onSelected: (String value) {
                 // Lógica para manejar la opción seleccionada
@@ -107,6 +120,9 @@ class PanPerfil extends StatelessWidget {
                     break;
                   case 'tienda':
                     // Lógica para la opción Tienda
+                    break;
+                  case 'cerrarses':
+                   Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)=>Regisingres()));
                     break;
                 }
               },
