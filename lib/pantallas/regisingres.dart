@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart'; 
+import 'package:google_fonts/google_fonts.dart';
 import 'package:agrip_app/pantallas/registro.dart';
 import 'package:agrip_app/pantallas/ingreso.dart';
 import 'package:agrip_app/pantallas/iniciosin.dart';
@@ -40,10 +40,10 @@ class Regisingres extends StatelessWidget {
                         child: TextButton(
                           onPressed: () {
                             Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const NuevoRegistro()),
-                        );
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NuevoRegistro()),
+                            );
                           },
                           child: Text(
                             'Registrarse',
@@ -71,10 +71,9 @@ class Regisingres extends StatelessWidget {
                       child: TextButton(
                         onPressed: () {
                           Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Ingreso()),
-                        );
+                            context,
+                            MaterialPageRoute(builder: (context) => Ingreso()),
+                          );
                         },
                         child: Text(
                           'Ingresar',
@@ -101,10 +100,10 @@ class Regisingres extends StatelessWidget {
                       child: TextButton(
                         onPressed: () {
                           Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const InicioSin()),
-                        );
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const InicioSin()),
+                          );
                         },
                         child: Text(
                           'Comprar Productos',

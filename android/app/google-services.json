@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "714714405632",
-    "project_id": "agriapp-6eb99",
-    "storage_bucket": "agriapp-6eb99.appspot.com"
+    "project_number": "719271368378",
+    "project_id": "igripido",
+    "storage_bucket": "igripido.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:714714405632:android:8f43d787c48fcee90df1e5",
+        "mobilesdk_app_id": "1:719271368378:android:988ee685a38c04397f1483",
         "android_client_info": {
           "package_name": "appgri.gs"
         }
@@ -15,45 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyD9EYCEsCCYuOgK76jwETSZiagsTi2e4JE"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:714714405632:android:1b4bd7c7a24b5f6e0df1e5",
-        "android_client_info": {
-          "package_name": "com.example.agriaapp"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyD9EYCEsCCYuOgK76jwETSZiagsTi2e4JE"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:714714405632:android:5cc9712503d539cb0df1e5",
-        "android_client_info": {
-          "package_name": "com.example.agrip_app"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyD9EYCEsCCYuOgK76jwETSZiagsTi2e4JE"
+          "current_key": "AIzaSyAXT0rijpYrYhxDfrxV_YXZgRqJgILD3cs"
         }
       ],
       "services": {

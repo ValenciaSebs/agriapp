@@ -1,11 +1,14 @@
+import 'package:agrip_app/controllers/user.dart';
 import 'package:agrip_app/pantallas/inicio.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class NuevoRegistro extends StatelessWidget {
-  const NuevoRegistro({Key? key}) : super(key: key);
-  //final _auth = FirebaseAuth.instance;
+
+
+  Usuario usuario = Usuario();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,6 +71,7 @@ class NuevoRegistro extends StatelessWidget {
                       ),
                       alignment: Alignment.center,
                       child: TextFormField(
+                        controller: usuario.email,
                         style: TextStyle(
                             color: Colors.black87), // Cambia el color del texto
                         decoration: InputDecoration(
@@ -97,6 +101,7 @@ class NuevoRegistro extends StatelessWidget {
                       ),
                       alignment: Alignment.center,
                       child: TextFormField(
+                        controller: usuario.password,
                         style: TextStyle(
                             color: Colors.black87), // Cambia el color del texto
                         decoration: InputDecoration(
@@ -118,12 +123,16 @@ class NuevoRegistro extends StatelessWidget {
                     ),
                     SizedBox(height: 33),
                     ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
+                      onPressed: () async {
+                        var res = await usuario.sigin();
+                        print(res);
+                        if (res) {
+                          Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (context) => const Inicio()),
                         );
+                        }
                       },
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(

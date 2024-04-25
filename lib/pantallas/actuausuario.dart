@@ -1,252 +1,184 @@
-import 'package:agrip_app/pantallas/inicio.dart';
-import 'package:agrip_app/pantallas/panperfil.dart';
-
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Actuausuario extends StatelessWidget {
   const Actuausuario({Key? key});
 
   @override
   Widget build(BuildContext context) {
+    // Supongamos que aquí obtienes los datos del usuario de la base de datos
+    // y los almacenas en variables, por ejemplo:
+    String nombre = 'Nombre de usuario';
+    String descripcion = 'Descripción del usuario';
+    String numeroTelefono = '123456789';
+    String correoElectronico = 'correo@example.com';
+    String linkWhatsApp = 'whatsapp://send?phone=123456789';
+
     return Scaffold(
-      // Usar Scaffold para tener la estructura de la pantalla
-      backgroundColor:
-          Color(0xFFfdf2e3), // Color de fondo para toda la pantalla
-      body: Center(
-        // Centrar el contenido vertical y horizontalmente
+      backgroundColor: Color(0xFFfdf2e3),
+      appBar: AppBar(
+        backgroundColor: Color(0xFF354C45), // Color de la barra superior
+        title: Text(
+          'Actualizar Perfil',
+          style: GoogleFonts.encodeSansExpanded(
+            color: Color(0xFF5AA189), // Color del texto superior
+          ),
+        ),
+      ),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(20),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center, // Centrar verticalmente
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                // Primer IconButton (X)
-                IconButton(
-                  onPressed: () {
-                   Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)=>Inicio()));
-                  },
-                  icon: Icon(
-                    Icons.close,
-                    color: Colors.black,
-                    size: 30,
-                  ),
-                ),
-                SizedBox(width: 20), // Espacio entre los widgets
-                // Segundo IconButton (Confirmación)
-                IconButton(
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)=>PanPerfil()));
-                  },
-                  icon: Icon(
-                    Icons.check,
-                    color: Colors.black,
-                    size: 30,
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 20), // Espacio entre los widgets
-            // Círculo blanco con borde verde y logo de cámara
-            Container(
-              width: MediaQuery.of(context).size.width * 0.50 * 0.9,
-              height: MediaQuery.of(context).size.width * 0.50 * 0.9,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.white,
-                border: Border.all(color: Color(0xFF0d5846)), // Borde verde
-              ),
-              child: IconButton(
-                onPressed: () {
-                  // Acción al hacer clic en el IconButton de la cámara
-                },
-                icon: Icon(
-                  Icons.camera_alt,
-                  color: Colors.black,
-                  size: 40,
-                ),
+            SizedBox(height: 20),
+            Text(
+              'Nombre:',
+              style: GoogleFonts.encodeSansExpanded(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 20), // Espacio entre los widgets
-            // Campos de texto con borde verde
-            Container(
-              width: 350,
-              height: 50,
-              decoration: BoxDecoration(
-                color: Colors.white, // Cambia el color de fondo
-                borderRadius: BorderRadius.circular(18),
-                border: Border.all(color: Color(0xFF0d5846)), // Borde verde
-              ),
-              alignment: Alignment.center,
-              child: TextFormField(
-                style: TextStyle(
-                  color: Colors.black87,
-                ), // Cambia el color del texto
-                decoration: InputDecoration(
-                  hintText: 'Nombre...',
-                  hintStyle: TextStyle(
-                    color: Colors.grey[500],
-                  ), // Cambia el color del hint
-                  border: InputBorder.none,
-                  contentPadding: EdgeInsets.symmetric(horizontal: 20),
-                ),
-                keyboardType: TextInputType.emailAddress,
-                cursorColor: Colors.grey[500], // Cambia el color del cursor
-                autofocus: false,
-                onChanged: (value) {
-                  // Lógica cuando se cambia el texto
-                },
+            SizedBox(height: 10),
+            Text(
+              nombre,
+              style: GoogleFonts.encodeSansExpanded(),
+            ),
+            SizedBox(height: 20),
+            Text(
+              'Descripción:',
+              style: GoogleFonts.encodeSansExpanded(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 20), // Espacio entre los widgets
-            Container(
-              width: 350,
-              height: 50,
-              decoration: BoxDecoration(
-                color: Colors.white, // Cambia el color de fondo
-                borderRadius: BorderRadius.circular(18),
-                border: Border.all(color: Color(0xFF0d5846)), // Borde verde
-              ),
-              alignment: Alignment.center,
-              child: TextFormField(
-                style: TextStyle(
-                  color: Colors.black87,
-                ), // Cambia el color del texto
-                decoration: InputDecoration(
-                  hintText: 'Descripción...',
-                  hintStyle: TextStyle(
-                    color: Colors.grey[500],
-                  ), // Cambia el color del hint
-                  border: InputBorder.none,
-                  contentPadding: EdgeInsets.symmetric(horizontal: 20),
-                ),
-                keyboardType: TextInputType.emailAddress,
-                cursorColor: Colors.grey[500], // Cambia el color del cursor
-                autofocus: false,
-                onChanged: (value) {
-                  // Lógica cuando se cambia el texto
-                },
+            SizedBox(height: 10),
+            Text(
+              descripcion,
+              style: GoogleFonts.encodeSansExpanded(),
+            ),
+            SizedBox(height: 20),
+            Text(
+              'Número de Teléfono:',
+              style: GoogleFonts.encodeSansExpanded(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 20), // Espacio entre los widgets
-            Container(
-              width: 350,
-              height: 50,
-              decoration: BoxDecoration(
-                color: Colors.white, // Cambia el color de fondo
-                borderRadius: BorderRadius.circular(18),
-                border: Border.all(color: Color(0xFF0d5846)), // Borde verde
-              ),
-              alignment: Alignment.center,
-              child: TextFormField(
-                style: TextStyle(
-                  color: Colors.black87,
-                ), // Cambia el color del texto
-                decoration: InputDecoration(
-                  hintText: 'Numero Telefono...',
-                  hintStyle: TextStyle(
-                    color: Colors.grey[500],
-                  ), // Cambia el color del hint
-                  border: InputBorder.none,
-                  contentPadding: EdgeInsets.symmetric(horizontal: 20),
-                ),
-                keyboardType: TextInputType.emailAddress,
-                cursorColor: Colors.grey[500], // Cambia el color del cursor
-                autofocus: false,
-                onChanged: (value) {
-                  // Lógica cuando se cambia el texto
-                },
+            SizedBox(height: 10),
+            Text(
+              numeroTelefono,
+              style: GoogleFonts.encodeSansExpanded(),
+            ),
+            SizedBox(height: 20),
+            Text(
+              'Correo Electrónico:',
+              style: GoogleFonts.encodeSansExpanded(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 20), // Espacio entre los widgets
-            Container(
-              width: 350,
-              height: 50,
-              decoration: BoxDecoration(
-                color: Colors.white, // Cambia el color de fondo
-                borderRadius: BorderRadius.circular(18),
-                border: Border.all(color: Color(0xFF0d5846)), // Borde verde
-              ),
-              alignment: Alignment.center,
-              child: TextFormField(
-                style: TextStyle(
-                  color: Colors.black87,
-                ), // Cambia el color del texto
-                decoration: InputDecoration(
-                  hintText: 'Gmail...',
-                  hintStyle: TextStyle(
-                    color: Colors.grey[500],
-                  ), // Cambia el color del hint
-                  border: InputBorder.none,
-                  contentPadding: EdgeInsets.symmetric(horizontal: 20),
-                ),
-                keyboardType: TextInputType.emailAddress,
-                cursorColor: Colors.grey[500], // Cambia el color del cursor
-                autofocus: false,
-                onChanged: (value) {
-                  // Lógica cuando se cambia el texto
-                },
+            SizedBox(height: 10),
+            Text(
+              correoElectronico,
+              style: GoogleFonts.encodeSansExpanded(),
+            ),
+            SizedBox(height: 20),
+            Text(
+              'Link WhatsApp:',
+              style: GoogleFonts.encodeSansExpanded(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 20), // Espacio entre los widgets
-            Container(
-              width: 350,
-              height: 50,
-              decoration: BoxDecoration(
-                color: Colors.white, // Cambia el color de fondo
-                borderRadius: BorderRadius.circular(18),
-                border: Border.all(color: Color(0xFF0d5846)), // Borde verde
-              ),
-              alignment: Alignment.center,
-              child: TextFormField(
-                style: TextStyle(
-                  color: Colors.black87,
-                ), // Cambia el color del texto
-                decoration: InputDecoration(
-                  hintText: 'Link WhatsApp...',
-                  hintStyle: TextStyle(
-                    color: Colors.grey[500],
-                  ), // Cambia el color del hint
-                  border: InputBorder.none,
-                  contentPadding: EdgeInsets.symmetric(horizontal: 20),
+            SizedBox(height: 10),
+            Text(
+              linkWhatsApp,
+              style: GoogleFonts.encodeSansExpanded(),
+            ),
+            SizedBox(height: 20),
+            SizedBox(height: 20), // Espacio entre las barras inferiores
+            ElevatedButton(
+              onPressed: () {
+                // Lógica para permitir al usuario actualizar su nombre
+              },
+              child: Text(
+                'Actualizar Nombre',
+                style: GoogleFonts.encodeSansExpanded(
+                  color: Color(0xFFfdf2e3), // Color del texto
                 ),
-                keyboardType: TextInputType.emailAddress,
-                cursorColor: Colors.grey[500], // Cambia el color del cursor
-                autofocus: false,
-                onChanged: (value) {
-                  // Lógica cuando se cambia el texto
-                },
+              ),
+              style: ButtonStyle(
+                backgroundColor:
+                    MaterialStateProperty.all<Color>(Color(0xFF354C45)),
               ),
             ),
-            SizedBox(height: 20), // Espacio entre los widgets
-            Container(
-              width: 350,
-              height: 50,
-              decoration: BoxDecoration(
-                color: Colors.white, // Cambia el color de fondo
-                borderRadius: BorderRadius.circular(18),
-                border: Border.all(color: Color(0xFF0d5846)), // Borde verde
-              ),
-              alignment: Alignment.center,
-              child: TextFormField(
-                style: TextStyle(
-                  color: Colors.black87,
-                ), // Cambia el color del texto
-                decoration: InputDecoration(
-                  hintText: 'Cambiar contraseña...',
-                  hintStyle: TextStyle(
-                    color: Colors.grey[500],
-                  ), // Cambia el color del hint
-                  border: InputBorder.none,
-                  contentPadding: EdgeInsets.symmetric(horizontal: 20),
+            SizedBox(height: 10), // Espacio entre los botones
+            ElevatedButton(
+              onPressed: () {
+                // Lógica para permitir al usuario actualizar su descripción
+              },
+              child: Text(
+                'Actualizar Descripción',
+                style: GoogleFonts.encodeSansExpanded(
+                  color: Color(0xFFfdf2e3), // Color del texto
                 ),
-                keyboardType: TextInputType.emailAddress,
-                cursorColor: Colors.grey[500], // Cambia el color del cursor
-                autofocus: false,
-                onChanged: (value) {
-                  // Lógica cuando se cambia el texto
-                },
+              ),
+              style: ButtonStyle(
+                backgroundColor:
+                    MaterialStateProperty.all<Color>(Color(0xFF354C45)),
               ),
             ),
+            SizedBox(height: 10), // Espacio entre los botones
+            ElevatedButton(
+              onPressed: () {
+                // Lógica para permitir al usuario actualizar su número de teléfono
+              },
+              child: Text(
+                'Actualizar Teléfono',
+                style: GoogleFonts.encodeSansExpanded(
+                  color: Color(0xFFfdf2e3), // Color del texto
+                ),
+              ),
+              style: ButtonStyle(
+                backgroundColor:
+                    MaterialStateProperty.all<Color>(Color(0xFF354C45)),
+              ),
+            ),
+            SizedBox(height: 10), // Espacio entre los botones
+            ElevatedButton(
+              onPressed: () {
+                // Lógica para permitir al usuario actualizar su correo electrónico
+              },
+              child: Text(
+                'Actualizar Correo Electrónico',
+                style: GoogleFonts.encodeSansExpanded(
+                  color: Color(0xFFfdf2e3), // Color del texto
+                ),
+              ),
+              style: ButtonStyle(
+                backgroundColor:
+                    MaterialStateProperty.all<Color>(Color(0xFF354C45)),
+              ),
+            ),
+            SizedBox(height: 10), // Espacio entre los botones
+            ElevatedButton(
+              onPressed: () {
+                // Lógica para permitir al usuario actualizar su link de WhatsApp
+              },
+              child: Text(
+                'Actualizar Link WhatsApp',
+                style: GoogleFonts.encodeSansExpanded(
+                  color: Color(0xFFfdf2e3), // Color del texto
+                ),
+              ),
+              style: ButtonStyle(
+                backgroundColor:
+                    MaterialStateProperty.all<Color>(Color(0xFF354C45)),
+              ),
+            ),
+            SizedBox(
+                height:
+                    20), // Espacio entre los botones inferiores y el final de la pantalla
           ],
         ),
       ),

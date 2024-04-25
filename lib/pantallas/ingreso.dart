@@ -1,9 +1,11 @@
+import 'package:agrip_app/controllers/user.dart';
 import 'package:agrip_app/pantallas/inicio.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Ingreso extends StatelessWidget {
-  const Ingreso({Key? key}) : super(key: key);
+
+  Usuario usuario = Usuario();
 
   @override
   Widget build(BuildContext context) {
@@ -64,6 +66,7 @@ class Ingreso extends StatelessWidget {
                       ),
                       alignment: Alignment.center,
                       child: TextFormField(
+                        controller: usuario.email,
                         style: TextStyle(
                             color: Colors.black87), // Cambia el color del texto
                         decoration: InputDecoration(
@@ -93,6 +96,7 @@ class Ingreso extends StatelessWidget {
                       ),
                       alignment: Alignment.center,
                       child: TextFormField(
+                        controller: usuario.password,
                         style: TextStyle(
                             color: Colors.black87), // Cambia el color del texto
                         decoration: InputDecoration(
