@@ -1,10 +1,8 @@
-import 'package:agrip_app/pantallas/actuausuario.dart';
 import 'package:flutter/material.dart';
-
 import 'package:google_fonts/google_fonts.dart';
 
 class Usuario2 extends StatelessWidget {
-  const Usuario2 ({Key? key});
+  const Usuario2({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,25 +15,23 @@ class Usuario2 extends StatelessWidget {
           Row(
             children: [
               Container(
-                width: MediaQuery.of(context).size.width * 0.50,
-                height: 264,
+                width: MediaQuery.of(context).size.width * 0.45,
+                height: MediaQuery.of(context).size.width * 0.45,
                 child: Stack(
                   children: [
                     // Rectángulo verde
                     Container(
                       decoration: BoxDecoration(
                         color: Color(0xFF0d5846),
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(125.0),
-                          bottomRight: Radius.circular(125.0),
-                        ),
+                        borderRadius: BorderRadius.circular(
+                            125.0), // Establecer un radio de borde para todas las esquinas
                       ),
                     ),
                     // Círculo blanco
                     Center(
                       child: Container(
-                        width: MediaQuery.of(context).size.width * 0.50 * 0.9,
-                        height: MediaQuery.of(context).size.width * 0.50 * 0.9,
+                        width: MediaQuery.of(context).size.width * 0.50 * 0.8,
+                        height: MediaQuery.of(context).size.width * 0.50 * 0.8,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           color: Colors.white,
@@ -57,7 +53,8 @@ class Usuario2 extends StatelessWidget {
                           color: Colors.black,
                           fontSize: 16.0,
                           fontWeight: FontWeight.bold,
-                          fontFamily: GoogleFonts.encodeSansExpanded().fontFamily,
+                          fontFamily:
+                              GoogleFonts.encodeSansExpanded().fontFamily,
                         ),
                       ),
                       SizedBox(height: 8), // Espacio entre los textos
@@ -66,7 +63,8 @@ class Usuario2 extends StatelessWidget {
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 16.0,
-                          fontFamily: GoogleFonts.encodeSansExpanded().fontFamily,
+                          fontFamily:
+                              GoogleFonts.encodeSansExpanded().fontFamily,
                         ),
                         overflow: TextOverflow.ellipsis,
                         maxLines: 13,
@@ -92,7 +90,8 @@ class Usuario2 extends StatelessWidget {
                           color: Colors.black,
                           fontSize: 18.0,
                           fontWeight: FontWeight.bold,
-                          fontFamily: GoogleFonts.encodeSansExpanded().fontFamily,
+                          fontFamily:
+                              GoogleFonts.encodeSansExpanded().fontFamily,
                         ),
                       ),
                       SizedBox(height: 20), // Espacio entre los textos
@@ -103,21 +102,25 @@ class Usuario2 extends StatelessWidget {
                           color: Colors.black,
                           fontSize: 18.0,
                           fontWeight: FontWeight.bold,
-                          fontFamily: GoogleFonts.encodeSansExpanded().fontFamily,
+                          fontFamily:
+                              GoogleFonts.encodeSansExpanded().fontFamily,
                         ),
                       ),
-                      SizedBox(height: 8.0), // Espacio entre el texto y los iconos
+                      SizedBox(
+                          height: 8.0), // Espacio entre el texto y los iconos
                       // Iconos
                       Row(
                         children: [
                           Icon(Icons.phone, color: Colors.black),
-                          SizedBox(width: 8.0), // Espacio entre el icono y el texto
+                          SizedBox(
+                              width: 8.0), // Espacio entre el icono y el texto
                           Text(
                             "4488123",
                             style: TextStyle(
                               fontSize: 16.0,
                               color: Colors.black,
-                              fontFamily: GoogleFonts.encodeSansExpanded().fontFamily,
+                              fontFamily:
+                                  GoogleFonts.encodeSansExpanded().fontFamily,
                             ),
                           ),
                         ],
@@ -126,13 +129,15 @@ class Usuario2 extends StatelessWidget {
                       Row(
                         children: [
                           Icon(Icons.email, color: Colors.black),
-                          SizedBox(width: 8.0), // Espacio entre el icono y el texto
+                          SizedBox(
+                              width: 8.0), // Espacio entre el icono y el texto
                           Text(
                             "one@gmail.com",
                             style: TextStyle(
                               fontSize: 16.0,
                               color: Colors.black,
-                              fontFamily: GoogleFonts.encodeSansExpanded().fontFamily,
+                              fontFamily:
+                                  GoogleFonts.encodeSansExpanded().fontFamily,
                             ),
                           ),
                         ],
@@ -154,7 +159,8 @@ class Usuario2 extends StatelessWidget {
                         'assets/imagenes/wpp_icon.png',
                         height: 65,
                         width: 65, // Ancho específico para la imagen
-                        fit: BoxFit.cover, // Ajustar el tamaño de la imagen para cubrir el espacio disponible
+                        fit: BoxFit
+                            .cover, // Ajustar el tamaño de la imagen para cubrir el espacio disponible
                       ),
                     ),
                     SizedBox(height: 20),
