@@ -1,6 +1,7 @@
-import 'package:agrip_app/pantallas/agregarnombres.dart';
-import 'package:agrip_app/pantallas/regisingres.dart';
-import 'package:agrip_app/pantallas/splash_screen.dart';
+import 'package:agrip_app/view/firebd/agregarnombres.dart';
+import 'package:agrip_app/view/general/splash_screen.dart';
+import 'package:agrip_app/view/ingresoregistro/regisingres.dart';
+
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
